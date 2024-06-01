@@ -647,6 +647,32 @@ let render = function () {
     requestAnimationFrame(render); // requestAnimationFrame is a method that calls the render function before the next repaint. This is used to render the scene at 60 frames per second and is more efficient than using setInterval because it only renders when the browser is ready to repaint
 };
 
+// Load a statue in the middle
+const loader = new THREE.GLTFLoader();
+loader.load('statue/demon/scene.gltf', function (gltf) {
+    const statue = gltf.scene;
+    statue.position.set(0, 0.25, 0);
+    statue.scale.set(0.5, 0.5, 0.5); // Scale the statue if necessary
+    scene.add(statue);
+    // Iterate through all the meshes in the statue and update their materials
+    statue.traverse((child) => {
+        if (child.isMesh) {
+          map: child.material.map,
+            // Modify child.material here to improve appearance
+            (child.material.metalness = 0.0),
+            (child.material.roughness = 0.2),
+            // Cast shadow
+            (child.castShadow = true);
+
+          // console.log("Statue Material:", child.material);
+        }
+    });
+
+    // render(); // Start the animation loop after the model is loaded
+}, undefined, function (error) {
+    console.log(error);
+});
+
 /*
 //Function when a key is pressed, execute this function
 function onKeyDown(event) {
