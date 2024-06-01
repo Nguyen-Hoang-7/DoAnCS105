@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
+</head>
+<body>
+    
+    <div class="background_menu">
+        <div id="menu">
+            <div id="img_container">
+                <div id="starry_night_bg"></div>
+            </div>
+            <div id="content_container">
+                <div id="content">
+                    <div class="title">
+                        <h1 class="main">3D Art Gallery</h1>
+                    </div>
+                    <div>
+                        <p>This is an interactive 3D gallery</p>
+                        <p>Made with love and Three.js</p>
+                    </div>
+
+                    <div>
+                        <p class="instructions">Instructions</p>
+                        <p>Arrow Keys or W/A/S/D to move around</p>
+                        <p>Look around with mouse</p>
+                    </div>
+
+                    <div id="play_button">
+                        <p>EXPLORE ART</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="audio_controls">
+        <button id="start_audio">Start Audio Guide</button>
+        <button id="stop_audio">Stop Audio Guide</button>
+    </div>
+    <div id="painting-info"></div>
+    <script src="./js/main.js"></script>
+    
+
+</body>
+</html>
