@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sukuna
+* source:	https://sketchfab.com/3d-models/sukuna-3e01d602184f421c8f6c60098c716c54
+* author:	Jared The Goober (https://sketchfab.com/jjjjared)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sukuna" (https://sketchfab.com/3d-models/sukuna-3e01d602184f421c8f6c60098c716c54) by Jared The Goober (https://sketchfab.com/jjjjared) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
