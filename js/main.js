@@ -11,7 +11,7 @@ const camera = new THREE.PerspectiveCamera(
 );
 
 scene.add(camera);
-camera.position.set(0, 3, 0); // move the camera back 5 units
+camera.position.set(2, 3, -5); // move the camera back 5 units
 
 //Renderer
 const renderer = new THREE.WebGLRenderer({antialias: false}); //for smooth edges
@@ -673,6 +673,131 @@ loader.load('statue/demon/scene.gltf', function (gltf) {
     console.log(error);
 });
 
+ // const gui = new GUI();
+
+// Load 4 benches
+loader.load("bench/church_bench/scene.gltf", (gltf) => {
+    const bench = gltf.scene;
+    console.log("BENCH", gltf);
+
+    // Iterate through all the meshes in the bench and update their materials
+    bench.traverse((child) => {
+        if (child.isMesh) {
+            console.log("Materials:", child.material);
+            console.log("Map Material", child.material.map);
+            console.log("Material Name:", child.material.name);
+            console.log("Material Type:", child.material.type);
+            console.log("UV attributes:", child.geometry.attributes.uv);
+        }
+        undefined,
+            (error) => {
+            console.error(
+                "An error occurred while loading the bench model.",
+                error
+            );
+        };
+    });
+
+    // Default Position and Scale
+    bench.position.set(-17, -3.12, 0);
+    bench.rotation.set(0, 0, 0);
+    bench.scale.set(3, 3, 5);
+
+    // Add the bench to the scene
+    scene.add(bench);
+});
+
+loader.load("bench/church_bench/scene.gltf", (gltf) => {
+    const bench = gltf.scene;
+    console.log("BENCH", gltf);
+
+    // Iterate through all the meshes in the bench and update their materials
+    bench.traverse((child) => {
+        if (child.isMesh) {
+            console.log("Materials:", child.material);
+            console.log("Map Material", child.material.map);
+            console.log("Material Name:", child.material.name);
+            console.log("Material Type:", child.material.type);
+            console.log("UV attributes:", child.geometry.attributes.uv);
+        }
+        undefined,
+            (error) => {
+            console.error(
+                "An error occurred while loading the bench model.",
+                error
+            );
+        };
+    });
+
+    // Default Position and Scale
+    bench.position.set(17, -3.12, 0);
+    bench.rotation.set(0, -Math.PI, 0);
+    bench.scale.set(3, 3, 5);
+
+    // Add the bench to the scene
+    scene.add(bench);
+});
+loader.load("bench/church_bench/scene.gltf", (gltf) => {
+    const bench = gltf.scene;
+    console.log("BENCH", gltf);
+
+    // Iterate through all the meshes in the bench and update their materials
+    bench.traverse((child) => {
+        if (child.isMesh) {
+            console.log("Materials:", child.material);
+            console.log("Map Material", child.material.map);
+            console.log("Material Name:", child.material.name);
+            console.log("Material Type:", child.material.type);
+            console.log("UV attributes:", child.geometry.attributes.uv);
+        }
+        undefined,
+            (error) => {
+            console.error(
+                "An error occurred while loading the bench model.",
+                error
+            );
+        };
+    });
+
+    // Default Position and Scale
+    bench.position.set(0, -3.12, 17);
+    bench.rotation.set(0, Math.PI /2, 0);
+    bench.scale.set(3, 3, 5);
+
+    // Add the bench to the scene
+    scene.add(bench);
+});
+
+loader.load("bench/church_bench/scene.gltf", (gltf) => {
+    const bench = gltf.scene;
+    console.log("BENCH", gltf);
+
+    // Iterate through all the meshes in the bench and update their materials
+    bench.traverse((child) => {
+        if (child.isMesh) {
+            console.log("Materials:", child.material);
+            console.log("Map Material", child.material.map);
+            console.log("Material Name:", child.material.name);
+            console.log("Material Type:", child.material.type);
+            console.log("UV attributes:", child.geometry.attributes.uv);
+        }
+        undefined,
+            (error) => {
+            console.error(
+                "An error occurred while loading the bench model.",
+                error
+            );
+        };
+    });
+
+    // Default Position and Scale
+    bench.position.set(0, -3.12, -17);
+    bench.rotation.set(0, -Math.PI /2, 0);
+    bench.scale.set(3, 3, 5);
+
+    // Add the bench to the scene
+    scene.add(bench);
+});
 /*
 //Function when a key is pressed, execute this function
 function onKeyDown(event) {
